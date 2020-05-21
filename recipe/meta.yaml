@@ -1,5 +1,5 @@
 {% set name = "platformio" %}
-{% set version = "4.2.1" %}
+{% set version = "4.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 310fa8b624cf938ef95284ae3a40a9caa36aafef32ac30ad588b43df516945c3
+  sha256: bf1d945aa5910a902dd21e7d82f4a54114a58b1d10e093394b29251e9536a9c9
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - platformio = platformio.__main__:main
     - pio = platformio.__main__:main
@@ -20,7 +20,7 @@ build:
 
 requirements:
   host:
-    - python >=3 
+    - python >=3
     - pip
   run:
     - python >=3
@@ -45,7 +45,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'PlatformIO is a new generation ecosystem for embedded development.'
+  summary: PlatformIO is a new generation ecosystem for embedded development.
   dev_url: https://github.com/platformio/platformio-core
 
 extra:
