@@ -24,9 +24,10 @@ requirements:
     - pip
   run:
     - python >=3
+    - bottle
     # PlatformIO specifies max versions of software that does not exist yet
     # I just removed the max version pinnings
-    - click >=5
+    - click >=5,!=7.1.0,!-7.1.1
     - colorama
     - pyserial >=3,!=3.3
     - requests >=2.4.0
