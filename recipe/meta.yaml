@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - platformio = platformio.__main__:main
@@ -27,7 +27,7 @@ requirements:
     - bottle
     # PlatformIO specifies max versions of software that does not exist yet
     # I just removed the max version pinnings
-    - click >=5,!=7.1.0,!=-7.1.1
+    - click >=5,!=7.1.0,!=7.1.1
     - colorama
     - pyserial >=3,!=3.3
     - requests >=2.4.0
