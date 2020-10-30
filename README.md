@@ -5,11 +5,11 @@ Home: https://platformio.org/
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/platformio-feedstock/blob/master/LICENSE.txt)
 
 Summary: PlatformIO is a new generation ecosystem for embedded development.
 
-
+Development: https://github.com/platformio/platformio-core
 
 Current build status
 ====================
