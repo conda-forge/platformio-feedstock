@@ -1,5 +1,5 @@
 {% set name = "platformio" %}
-{% set version = "5.0.3" %}
+{% set version = "5.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5035e991dc00640aa06b47f01f2e1229fd3f98710bb94bdd5566e45247624946
+  sha256: 5c19eee89ca957aa3ecd4f7357dae3c4ff902992f375fa620926eb6442a6c6a2
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - pip
   run:
     - python >=3
-    - bottle
+    - bottle <0.13
     # PlatformIO specifies max versions of software that does not exist yet
     # I just removed the max version pinnings
     - click >=5,!=7.1.0,!=7.1.1
