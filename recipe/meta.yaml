@@ -24,7 +24,7 @@ requirements:
     - pip
   run:
     - python >=3
-    - bottle
+    - bottle <0.13
     # PlatformIO specifies max versions of software that does not exist yet
     # I just removed the max version pinnings
     - click >=5,!=7.1.0,!=7.1.1
