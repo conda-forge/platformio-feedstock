@@ -24,17 +24,17 @@ requirements:
     - pip
   run:
     - python >=3
-    - bottle <0.13
+    - bottle 0.12
     # PlatformIO specifies max versions of software that does not exist yet
     # I just removed the max version pinnings
-    - click >=5,!=7.1.0,!=7.1.1
+    - click >=7.1.2,<9,!=8.0.2
     - colorama
     - pyserial >=3,!=3.3
     - requests >=2.4.0
     - semantic_version >=2.8.1
     - tabulate >=0.8.3
-    - pyelftools >=0.25
-    - marshmallow >=2
+    - pyelftools >=0.27,<1
+    - marshmallow >=2,<4
 
 test:
   imports:
