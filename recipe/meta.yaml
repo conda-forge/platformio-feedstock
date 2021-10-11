@@ -1,5 +1,5 @@
 {% set name = "platformio" %}
-{% set version = "5.2.0" %}
+{% set version = "5.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b1ed1962c3f394cd1e40467696bf5f8f57aec3af3bf1ba34ee7a33f982e8e8e3
+  sha256: ad039c8ca70a1c4465c9a9c2effdc63f1ea878696f99cdec394c92fbea3d150f
 
 build:
   noarch: python
