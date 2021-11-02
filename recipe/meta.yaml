@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - platformio = platformio.__main__:main
@@ -35,10 +35,22 @@ requirements:
     - tabulate >=0.8.3
     - pyelftools >=0.27,<1
     - marshmallow >=2,<4
+    - zeroconf
+    - aiofiles 0.7
+    - ajsonrpc 1
+    - starlette 0.16
+    - uvicorn 0.15
+    - wsproto 1.0
 
 test:
+  requires:
+    - pip
   imports:
     - platformio
+  commands:
+    - pip check
+    - platformio --help
+    - pio --help
 
 about:
   home: https://platformio.org/
