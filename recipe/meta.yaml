@@ -1,5 +1,5 @@
 {% set name = "platformio" %}
-{% set version = "5.2.2" %}
+{% set version = "5.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d82aca38a8d1a529bb13614bb70b9c2aa73ea514acad5584b976872bf6e1a209
+  sha256: 94584b1cfd8cc82ee5c51cbecba57e884f906b0c3f2903b136049796d62ae86a
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - platformio = platformio.__main__:main
@@ -38,7 +38,7 @@ requirements:
     - zeroconf
     - aiofiles 0.7
     - ajsonrpc 1
-    - starlette 0.16
+    - starlette 0.17
     - uvicorn 0.15
     - wsproto 1.0
 
