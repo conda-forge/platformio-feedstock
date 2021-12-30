@@ -8,10 +8,15 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 822ac16e1bcf578b2645466c728f2779e1083ccb4fa21336f4d6539acec53e08
+  patches:
+    # 2021/12/30 hmaarrfk: I really don't think they have a hard requirement on
+    # zeroconf. Their update just said "bump_dependencies" when they moved
+    # from 0.37 to 0.38
+    - zeroconf_dep.patch
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - platformio = platformio.__main__:main
@@ -25,8 +30,6 @@ requirements:
   run:
     - python >=3
     - bottle 0.12
-    # PlatformIO specifies max versions of software that does not exist yet
-    # I just removed the max version pinnings
     - click >=7.1.2,<9,!=8.0.2
     - colorama
     - pyserial >=3,!=3.3
@@ -35,7 +38,7 @@ requirements:
     - tabulate >=0.8.3
     - pyelftools >=0.27,<1
     - marshmallow >=2,<4
-    - zeroconf
+    - zeroconf >=0.37
     - aiofiles 0.8
     - ajsonrpc 1
     - starlette 0.17
