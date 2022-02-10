@@ -1,5 +1,5 @@
 {% set name = "platformio" %}
-{% set version = "5.2.4" %}
+{% set version = "5.2.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 822ac16e1bcf578b2645466c728f2779e1083ccb4fa21336f4d6539acec53e08
+  sha256: aa0d1ff8a17ac1952eb45d37a84d4aa6e5d1aa65098bd1525db34be83c42c4ae
   patches:
     # 2021/12/30 hmaarrfk: I really don't think they have a hard requirement on
     # zeroconf. Their update just said "bump_dependencies" when they moved
@@ -16,7 +16,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - platformio = platformio.__main__:main
