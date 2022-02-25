@@ -34,15 +34,15 @@ requirements:
     - colorama
     - pyserial >=3,!=3.3
     - requests >=2.4.0
-    - semantic_version >=2.8.1
+    - semantic_version 2.9
     - tabulate >=0.8.3
     - pyelftools >=0.27,<1
     - marshmallow >=2,<4
     - zeroconf >=0.37
     - aiofiles 0.8
     - ajsonrpc 1
-    - starlette 0.17
-    - uvicorn 0.16
+    - starlette 0.18
+    - uvicorn 0.17
     - wsproto 1.0
 
 test:
