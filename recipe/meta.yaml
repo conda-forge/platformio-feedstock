@@ -8,11 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: e4cb9d45327d93b5888ba0c5d4c9ca22a30411952056e55b79d714c7f84f9b83
-  patches:
-    # 2021/12/30 hmaarrfk: I really don't think they have a hard requirement on
-    # zeroconf. Their update just said "bump_dependencies" when they moved
-    # from 0.37 to 0.38
-    - zeroconf_dep.patch
 
 build:
   noarch: python
