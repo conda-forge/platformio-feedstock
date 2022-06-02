@@ -30,20 +30,20 @@ requirements:
   run:
     - python >=3
     - bottle 0.12
-    - click >=7.1.2,<9,!=8.0.2
+    - click >=8.0.4,<9,!=8.0.2
     - colorama
-    - pyserial >=3,!=3.3
-    - requests >=2.4.0
-    - semantic_version 2.9
-    - tabulate >=0.8.3
+    - marshmallow 3
     - pyelftools >=0.27,<1
-    - marshmallow >=2,<4
-    - zeroconf >=0.37
+    - pyserial 3
+    - requests 2
+    - semantic_version 2.10
+    - tabulate 0.8
+    - zeroconf >=0.37,<1.0a
     - aiofiles 0.8
     - ajsonrpc 1
-    - starlette 0.18
+    - starlette 0.20
     - uvicorn 0.17
-    - wsproto 1.0
+    - wsproto 1.1
 
 test:
   requires:
