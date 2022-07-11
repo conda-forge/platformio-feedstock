@@ -37,7 +37,7 @@ requirements:
     - aiofiles 0.8
     - ajsonrpc 1
     - starlette 0.20
-    - uvicorn 0.17
+    - uvicorn 0.18
     - wsproto 1.1
 
 test:
