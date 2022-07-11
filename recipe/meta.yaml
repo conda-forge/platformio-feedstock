@@ -1,5 +1,5 @@
 {% set name = "platformio" %}
-{% set version = "6.0.2" %}
+{% set version = "6.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e4cb9d45327d93b5888ba0c5d4c9ca22a30411952056e55b79d714c7f84f9b83
+  sha256: 41409e77fb028a7c5e29a0de622af5a118dfc125b0993fab7f605cfe9047e67d
 
 build:
   noarch: python
@@ -37,7 +37,7 @@ requirements:
     - aiofiles 0.8
     - ajsonrpc 1
     - starlette 0.20
-    - uvicorn 0.17
+    - uvicorn 0.18
     - wsproto 1.1
 
 test:
