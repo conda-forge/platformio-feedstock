@@ -25,20 +25,20 @@ requirements:
   run:
     - python >=3
     - bottle 0.12
-    - click >=8.0.4,<9,!=8.0.2
+    - click >=8.0.4,<9
     - colorama
     - marshmallow 3
     - pyelftools >=0.27,<1
     - pyserial 3
     - requests 2
     - semantic_version 2.10
-    - tabulate 0.8
+    - tabulate 0.9
     - zeroconf >=0.37,<1.0a
-    - aiofiles 0.8
+    - aiofiles 22.1
     - ajsonrpc 1
-    - starlette 0.20
-    - uvicorn 0.18
-    - wsproto 1.1
+    - starlette 0.21
+    - uvicorn 0.19
+    - wsproto 1.2
 
 test:
   requires:
