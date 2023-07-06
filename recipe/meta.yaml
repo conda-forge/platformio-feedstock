@@ -1,5 +1,5 @@
 {% set name = "platformio" %}
-{% set version = "6.1.6" %}
+{% set version = "6.1.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d0214c4da22454269220c0344214eb1fe1f65ca1c9dc19a3d160653a92343af4
+  sha256: 1994484dfb87b321cd0a1632f91d7018c94f3c305bbf377eb9d6df592c005635
 
 build:
   noarch: python
@@ -25,19 +25,18 @@ requirements:
   run:
     - python >=3.8
     - bottle 0.12
-    - click >=8.0.4,<9,!=8.0.2
+    - click 8.1.*
     - colorama
-    - marshmallow 3.*
-    - pyelftools >=0.27,<1
-    - pyserial 3.*
+    - marshmallow 3.19.*
+    - pyelftools 0.29
+    - pyserial 3.5.*
     - requests 2.*
     - semantic_version 2.10.*
-    - tabulate 0.9.*
-    - zeroconf >=0.37,<1.0a
-    - aiofiles 22.1.*
-    - ajsonrpc 1.*
-    - starlette 0.23.*
-    - uvicorn 0.20.*
+    - tabulate 0.*
+    - aiofiles >=0.8.0
+    - ajsonrpc 1.2.*
+    - starlette 0.28.*
+    - uvicorn 0.22.*
     - wsproto 1.2.*
 
 test:
