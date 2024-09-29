@@ -24,20 +24,20 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - bottle 0.12
-    - click 8.1.*
+    - bottle 0.13
+    - click >=8.0.4,<9.0.0a0
     - colorama
-    - marshmallow 3.19.*
-    - pyelftools 0.29
+    - marshmallow 3
+    - pyelftools >0.27,<1.0a0
     - pyserial 3.5.*
     - requests 2.*
     - semantic_version 2.10.*
     - tabulate 0.*
     - aiofiles >=0.8.0
     - ajsonrpc 1.2.*
-    - starlette 0.28.*
-    - uvicorn 0.22.*
-    - wsproto 1.2.*
+    - starlette >=0.19,<0.40a
+    - uvicorn >=0.16,<0.31
+    - wsproto 1
 
 test:
   requires:
