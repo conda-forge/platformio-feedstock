@@ -1,12 +1,11 @@
-{% set name = "platformio" %}
 {% set version = "6.1.18" %}
 
 package:
-  name: {{ name|lower }}
+  name: platformio
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/p/platformio/platformio-{{ version }}.tar.gz
   sha256: 6ea19c66fba3c5272378afa6ae11abbf883243dd8e503ac5f4ff8ac277ccc7c6
 
 build:
@@ -25,7 +24,7 @@ requirements:
   run:
     - python >=3.8
     - bottle 0.13
-    - click >=8.0.4,<9.0.0a0
+    - click >=8.0.4,<8.1.8a0
     - colorama
     - marshmallow 3
     - pyelftools >0.27,<1.0a0
@@ -33,11 +32,10 @@ requirements:
     - requests 2.*
     - semantic_version 2.10.*
     - tabulate 0.*
-    - aiofiles >=0.8.0
     - ajsonrpc 1.2.*
-    - starlette >=0.19,<0.40a
-    - uvicorn >=0.16,<0.31
-    - wsproto 1
+    - starlette >=0.19,<0.47a
+    - uvicorn >=0.16,<0.35
+    - wsproto 1.*
 
 test:
   requires:
