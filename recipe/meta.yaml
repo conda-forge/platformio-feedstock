@@ -1,12 +1,12 @@
-{% set version = "6.1.19" %}
+{% set version = "6.2.0" %}
 
 package:
   name: platformio
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/p/platformio/platformio-{{ version }}.tar.gz
-  sha256: 7b53eaa36fcba554411b669eab845626da7c4b90fa6aaee9fe9f1875d82f5f54
+  url: https://files.pythonhosted.org/packages/source/p/platformio/platformio-{{ version }}.tar.gz
+  sha256: 880ea06734908b3d6c0a96598ca7be572c2b6755585784aa63a201bbdfb8c59d
 
 build:
   noarch: python
